@@ -30,8 +30,8 @@ Asegúrate de tener instalados los siguientes programas antes de comenzar:
 
 1. **Clonar el repositorio**:
     ```sh
-    git clone <URL_DEL_REPOSITORIO>
-    cd back-end-kapsch
+    git clone <https://github.com/cristianet/Kapsch.git>
+    cd backend-kapsch
     ```
 
 2. **Compilar y ejecutar el proyecto**:
@@ -50,8 +50,8 @@ Asegúrate de tener instalados los siguientes programas antes de comenzar:
 
 1. **Clonar el repositorio** (si no se encuentra en el mismo directorio):
     ```sh
-    git clone <URL_DEL_REPOSITORIO>
-    cd front-end-kapsch
+    git clone <https://github.com/cristianet/Kapsch.git>
+    cd frontend-kapsch
     ```
 
 2. **Instalar dependencias**:
