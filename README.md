@@ -2,7 +2,7 @@
 
 Bienvenido al proyecto de Onboarding Test de Kapsch
 
-## Artifacts
+## Artefactos
 
 ### Back-End
 - **Framework:** Java Spring Boot 3
