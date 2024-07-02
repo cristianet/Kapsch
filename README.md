@@ -72,6 +72,7 @@ Para ejecutar las pruebas unitarias del back-end, utiliza el siguiente comando:
 
 ```sh
 mvn test
+```
 
 ## Arquitectura
 
