@@ -9,6 +9,8 @@ Bienvenido al proyecto de Onboarding Test de Kapsch
 - **Gestor de Dependencias:** Maven
 - **Pruebas:** JUnit 5
 
+URL: http://localhost:8080/weather?latitude=52.52&longitude=13.41
+
 ### Front-End
 - **Framework:** Angular v18
 - **Estilos:** Bootstrap
