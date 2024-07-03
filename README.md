@@ -95,9 +95,8 @@ mvn test
 │  ┌──────────────┐                │                           │
 │  │   Services   │                │                           │
 │  │              │                │                           │
-│  │ WeatherService    ◄────────────┘                           │
+│  │ WeatherService    ◄───────────┘                           │
 │  │              │                                            │
-│  │ WeatherStorageService ────────────┐                       │
 │  └──────────────┘                    │                       │
 │                                      │                       │
 │  ┌──────────────┐                    │                       │
