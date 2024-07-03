@@ -1,25 +1,37 @@
-<div>
-  <h2>Weather Requests</h2>
-<table>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Latitude</th>
-        <th>Longitude</th>
-        <th>Request Time</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let request of weatherRequests">
-        <td>{{ request.id }}</td>
-        <td>{{ request.latitude }}</td>
-        <td>{{ request.longitude }}</td>
-        <td>{{ request.requestTime }}</td>
-        <td><button (click)="viewDetails(request.id)">View Details</button></td>
-      </tr>
-    </tbody>
-  </table>
 
-  <app-weather-details *ngIf="selectedRequest" [request]="selectedRequest"></app-weather-details>
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-md-9">
+      <h2>Weather Requests</h2>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Request Time</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let request of weatherRequests | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }">
+            <td>{{ request.id }}</td>
+            <td>{{ request.latitude }}</td>
+            <td>{{ request.longitude }}</td>
+            <td>{{ request.requestTime }}</td>
+            <td><button class="btn btn-primary btn-sm" (click)="viewDetails(request.id)">
+              <i class="fa fa-info-circle"></i> View Details
+            </button></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="d-flex justify-content-center">
+        <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+      </div>
+<div class="container">
+      <app-weather-details *ngIf="selectedRequest" [request]="selectedRequest"></app-weather-details>
+    </div>
+    </div>
+  </div>
 </div>

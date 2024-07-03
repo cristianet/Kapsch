@@ -7,6 +7,7 @@ import { WeatherFormComponent } from './components/weather-form/weather-form.com
 import { WeatherRequestsComponent } from './components/weather-requests/weather-requests.component';
 import { WeatherDetailsComponent } from './components/weather-details/weather-details.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule    
   ],
   providers: [],
   bootstrap: [AppComponent]
