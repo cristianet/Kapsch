@@ -1,0 +1,25 @@
+<div>
+  <h2>Weather Requests</h2>
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Request Time</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let request of weatherRequests">
+        <td>{{ request.id }}</td>
+        <td>{{ request.latitude }}</td>
+        <td>{{ request.longitude }}</td>
+        <td>{{ request.requestTime }}</td>
+        <td><button (click)="viewDetails(request.id)">View Details</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <app-weather-details *ngIf="selectedRequest" [request]="selectedRequest"></app-weather-details>
+</div>
