@@ -13,6 +13,10 @@ URL: http://localhost:8080/weather?latitude=52.52&longitude=13.41
 
 URL: http://localhost:8080/weather-requests
 
+URL: http://localhost:8080/weather-details/1
+
+URL: http://localhost:8080/weather-details
+
 ### Front-End
 - **Framework:** Angular v18
 - **Estilos:** Bootstrap
