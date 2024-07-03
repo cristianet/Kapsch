@@ -1,0 +1,9 @@
+<div *ngIf="weatherDetail">
+    <h3>Weather Detail:</h3>
+    <table>
+      <tr><th>ID:</th><td>{{ weatherDetail.id }}</td></tr>
+      <tr><th>Temperature:</th><td>{{ weatherDetail.temperature }}</td></tr>
+      <tr><th>WindSpeed:</th><td>{{ weatherDetail.windSpeed }}</td></tr>
+      <tr><th>WindDirection:</th><td>{{ weatherDetail.windDirection }}</td></tr>
+    </table>
+  </div>
