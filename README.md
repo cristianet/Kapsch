@@ -10,6 +10,7 @@ Bienvenido al proyecto de Onboarding Test de Kapsch
 - **Pruebas:** JUnit 5
 
 URL: http://localhost:8080/weather?latitude=52.52&longitude=13.41
+
 URL: http://localhost:8080/weather-requests
 
 ### Front-End
