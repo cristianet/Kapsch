@@ -1,11 +1,14 @@
 package kapsch.demo.Controller;
 
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import kapsch.demo.Entities.WeatherRequest;
 import kapsch.demo.Services.WeatherService;
 
 @RestController
@@ -27,5 +30,11 @@ public class WeatherController {
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error interno del servidor - " + e.getMessage());
         }
+    }
+    
+    @GetMapping("/weather-requests")
+    public ResponseEntity<List<WeatherRequest>> getAllWeatherRequests() {
+        List<WeatherRequest> weatherRequests = weatherService.getAllWeatherRequests();
+        return ResponseEntity.ok(weatherRequests);
     }
 }
