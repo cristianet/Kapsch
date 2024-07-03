@@ -1,9 +1,18 @@
 package kapsch.demo.Entities;
 
-import javax.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "weather_details")
 public class WeatherDetail {
 
     @Id
@@ -18,7 +27,7 @@ public class WeatherDetail {
 
     private double temperature;
     private double windSpeed;
-    private int windDirection;
+    private double windDirection;
 
 
     public WeatherDetail() {
@@ -64,11 +73,11 @@ public class WeatherDetail {
         this.windSpeed = windSpeed;
     }
 
-    public int getWindDirection() {
+    public double getWindDirection() {
         return windDirection;
     }
 
-    public void setWindDirection(int windDirection) {
+    public void setWindDirection(double windDirection) {
         this.windDirection = windDirection;
     }
 }
