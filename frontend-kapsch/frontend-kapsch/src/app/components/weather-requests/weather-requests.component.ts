@@ -12,6 +12,9 @@ export class WeatherRequestsComponent implements OnInit {
   weatherRequests!: WeatherRequest[];
   selectedRequest: number = 0;
 
+  currentPage = 1;
+  itemsPerPage = 7;
+
   constructor(private weatherService: WeatherService) { }
 
   ngOnInit(): void {
