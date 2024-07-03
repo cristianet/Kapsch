@@ -1,9 +1,16 @@
 package kapsch.demo.Entities;
 
-import javax.persistence.*;
 import java.time.LocalDateTime;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 @Entity
+@Table(name = "weather_requests")
 public class WeatherRequest {
 
     @Id
@@ -17,6 +24,13 @@ public class WeatherRequest {
     private LocalDateTime requestTime;
 
     public WeatherRequest() {
+        // Default constructor needed by JPA
+    }
+
+    public WeatherRequest(double latitude, double longitude, LocalDateTime requestTime) {
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.requestTime = requestTime;
     }
 
     public Long getId() {
