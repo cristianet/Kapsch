@@ -1,6 +1,6 @@
-# Kapsch Onboarding Test
+# Ejemplo Java Spring Boot
 
-Bienvenido al proyecto de Onboarding Test de Kapsch
+Bienvenido al proyecto de Java Spring Boot
 
 ## Artefactos
 
